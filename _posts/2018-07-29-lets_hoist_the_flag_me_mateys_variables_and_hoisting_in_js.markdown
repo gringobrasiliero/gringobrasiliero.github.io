@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Lets Hoist the Flag me Mateys (Variables and Hoisting in JS)"
-date:       2018-07-29 18:32:03 +0000
+date:       2018-07-29 14:32:04 -0400
 permalink:  lets_hoist_the_flag_me_mateys_variables_and_hoisting_in_js
 ---
 
@@ -124,7 +124,7 @@ function hello(){
 console.log(greeting + “ lets get some dubloons!)
 var greeting = ‘Ahoy me mateys’
 }
-greeting()
+hello()
 // undefined lets get some dubloons!
 ```
 
@@ -135,7 +135,7 @@ function hello(){
 console.log(greeting + “ lets get some dubloons!)
 let greeting = ‘Ahoy me mateys’
 }
-Hello()
+hello()
 // ERROR: Uncaught ReferenceError: greeting is not defined
 ```
 
@@ -166,10 +166,6 @@ class Pirate {
     console.log(`The Pirates name is ${this.name}`);
   }
 }
-captain.piratesName()
-// The Pirates name is Hook
-Davey.piratesName()
-// The Pirates name is Davey Crockett
 ```
 
 Using this in the constructor for the Pirate Class, this is referring to the owner of that space, which is the class Pirate. Lets create some pirates. 
@@ -192,9 +188,14 @@ class Pirate {
     console.log(`The Pirates name is ${this.name}`);
   }
 }
+
+var captain = new Pirate("Hook", "pirate ship")
+var davey = new Pirate("Davey Crockett", "pirate ship")
+
+
 captain.piratesName()
 // The Pirates name is Hook
-Davey.piratesName()
+davey.piratesName()
 // The Pirates name is Davey Crockett
 ```
 
