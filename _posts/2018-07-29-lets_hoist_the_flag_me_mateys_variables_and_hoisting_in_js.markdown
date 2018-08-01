@@ -44,18 +44,18 @@ console.log(theirDubloons)
 
 ### Block Scope
 
-Let and const are also block scoped. 
+Let and Const are also block scoped. 
 
 ```
 If (true){explaining this js
 
-Const flag = “Jolly Roger”;
+const flag = “Jolly Roger”;
 Let coconuts = 50
 }
-Console.log(flag)
+console.log(flag)
 // Uncaught ReferenceError: flag is not defined
 
-Console.log(coconuts)
+console.log(coconuts)
 // Uncaught ReferenceError: coconuts is not defined
 ```
 
@@ -104,6 +104,7 @@ You would think that before a function is called, it must be defined. It may be 
 
 ```
 goFish()
+
 function goFish() {
 console.log(“I caught a fish!”)
 }
@@ -111,6 +112,7 @@ console.log(“I caught a fish!”)
 ```
 
 What? How can you go fish, if you do not know how to fish yet? In Javascript, when you run a program, it goes through 2 phases. The Compliation phase, and the execution phase. In the compliation phase, JavaScript reads the entire program, and stores the functions and variables into memory. It then goes through the execution phase, and executes the functions that you called. 
+
 We call this hoisting because it is as if the declarations are being hoisted to the top of the current scope. 
 
 As soon as you and your crew set sailing, the first thing your crew does is hoist the flag, allowing your Jolly Rodger to flap in the wind. There is no need to tell the crew to do so, as they know it is their responsibility to do it as soon as you begin sailing. JavaScript functions do the same thing! As soon as you run a function, they immediately raise the variable declarations to the top of the scope. 
@@ -144,14 +146,14 @@ hello()
 This refers to the object that owns the space that this is currently in. If you console.log this at the global scope, it refers to the window object. 
 
 ```
-Console.log(this)
-// Window
+console.log(typeof(this))
+// Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
 ```
 However, if you put this into a function, it comes back as an object.
 
 ```
-Function afunction() {
-Console.log(this)
+function afunction() {
+console.log(typeof(this))
 }
 //Object
 ```
@@ -200,7 +202,7 @@ davey.piratesName()
 ```
 
 When you call captain.piratesName(), the function is calling on ${this.name}. the owner of ‘this’ is the captain. ${this.name} refers to the captains name, which is Hook. 
-It is the same with davey.piratesName(). It is calling on ${this.name}, which in this context, ‘this’ is referring to davey. Davey’s name is “Davey Crockett.  
+It is the same with davey.piratesName(). It is calling on ${this.name}, which in this context, ‘this’ is referring to davey. Davey’s name is “Davey Crockett".  
 This can be confusing, but the great takeaway of all of ‘this’, is that if ‘this’ is referenced inside of a function or method, it equals the object that ‘this’ is inside of. If it is in the global scope, this is global. 
 
 I hope you enjoyed! Don’t forget to lock up your dubloons by claiming your variable as const or let, and avoid using var at all costs to prevent confusing yourself and your crew.  Happy Coding and Happy Sailing!
