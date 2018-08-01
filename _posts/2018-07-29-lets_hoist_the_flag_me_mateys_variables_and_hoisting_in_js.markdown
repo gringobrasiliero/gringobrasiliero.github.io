@@ -146,15 +146,18 @@ hello()
 This refers to the object that owns the space that this is currently in. If you console.log this at the global scope, it refers to the window object. 
 
 ```
-console.log(typeof(this))
+console.log(this)
 // Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
 ```
-However, if you put this into a function, it comes back as an object.
+If you put this into a function, it comes back as an object.
 
 ```
 function afunction() {
 console.log(typeof(this))
 }
+
+afunction()
+
 //Object
 ```
 ```
