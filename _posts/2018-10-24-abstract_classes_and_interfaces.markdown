@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Abstract classes and Interfaces "
-date:       2018-10-24 14:14:38 +0000
+title:      "Abstract Classes and Interfaces "
+date:       2018-10-24 10:14:39 -0400
 permalink:  abstract_classes_and_interfaces
 ---
 
